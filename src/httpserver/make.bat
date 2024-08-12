@@ -7,7 +7,7 @@ pip install pyinstaller
 cls
 
 echo Building Server
-pyinstaller --onefile startserver.py
+pyinstaller --onefile server.py
 
 echo Done!
 exit
