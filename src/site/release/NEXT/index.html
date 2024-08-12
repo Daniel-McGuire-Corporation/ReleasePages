@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL X.X | App</title>
+    <link rel="stylesheet" href="../../css/release.css">
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>App Version Download Template</h1>
+        <h2>Download for your OS:</h2>
+        <div class="download-links">
+            <div class="download-button" onclick="downloadWindows()">Download for Windows</div>
+            <div class="download-button" onclick="showComingSoon()">Download for macOS</div>
+            <div class="download-button" onclick="showLinuxPopup()">Download for Linux</div>
+            <div class="download-button" onclick="sourceCode()">Download Source</div>
+        </div>
+        <div id="release-notes" class="release-notes-container"></div>
+    </div>
+
+    <!-- Linux Download Popup -->
+    <div id="linuxPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLinuxPopup()">&times;</span>
+            <h2>Select a version:</h2>
+            <a href="#" class="version-link" onclick="startLinuxDownload('deb')">Debian / Ubuntu (deb)</a>
+            <a href="#" class="version-link" onclick="startLinuxDownload('pkg')">Arch / Manjaro (pkg.tar.zst)</a>
+            <a href="#" class="version-link" onclick="startLinuxDownload('appimage')">Other (AppImage)</a>
+        </div>
+    </div>
+
+    <!-- Countdown Popup -->
+    <div id="countdownPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeCountdownPopup()">&times;</span>
+            <h2>Starting download in <span id="countdown">10</span> seconds...</h2>
+        </div>
+    </div>
+
+    <script src="download.js"></script>
+</body>
+</html>
